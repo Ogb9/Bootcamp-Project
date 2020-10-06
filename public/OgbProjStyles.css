@@ -1,0 +1,29 @@
+.card{
+    background-color: #E6E6FA;
+}
+img{
+    margin-bottom: 5px;
+}
+#topbar{
+    margin-bottom: 10px;
+}
+#foota{
+    margin-top: 20px;
+    background-color: aqua;
+
+}
+body{
+    padding-top: 4.5rem;
+}
+#LoginPage{
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+#tnc{
+    font-size: small;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+#homefont {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
