@@ -33,10 +33,10 @@
                         <div class="form-group">
                             <label style=color:black><h2> What's your advice to upcoming students about <b>{{ $course }}</b> ?</h2></label>
                             <div id="app">
-                                <textarea maxlength="10" class="form-control" id="exampleFormControlTextarea1" name="sFeedback" v-model="writtenText" rows="6" placeholder="TypeHere"></textarea>
+                                <textarea maxlength="50" minlength="2" class="form-control" id="exampleFormControlTextarea1" name="sFeedback" v-model="writtenText" rows="6" placeholder="TypeHere"></textarea>
                                 <p>@{{charactersLeft}}/@{{maxLength}} characters remaining</p>
                                 <span v-if="charactersLeft===0">
-                                    Max length reached
+                                    Maximum character length reached
                                 </span>
                             </div>
                         </div>
@@ -44,10 +44,10 @@
                         <div class="form-group">
                             <label style=color:black><h2> What's your feedback to the lecturer for <b>{{ $course }}</b> ?</h2></label>
                             <div id="app1">
-                                <textarea maxlength="10" class="form-control" id="exampleFormControlTextarea1" name="lFeedback" v-model="writtenText" rows="6" placeholder="TypeHere"></textarea>
+                                <textarea maxlength="10" minlength="2" class="form-control" id="exampleFormControlTextarea1" name="lFeedback" v-model="writtenText" rows="6" placeholder="TypeHere"></textarea>
                                 <p>@{{charactersLeft}}/@{{maxLength}} characters remaining</p>
                                 <span v-if="charactersLeft===0">
-                                    Max length reached
+                                    Maximum character length reached
                                 </span>
                             </div>
                         </div>
@@ -68,13 +68,13 @@
             data: function(){
                 return {     
                     writtenText :'',
-                    maxLength : 10,
+                    maxLength : 50,
                 }
             },             
             computed: {
                 charactersLeft: function(){
                     char = this.writtenText.length,
-                    limit = 10;
+                    limit = 50;
                     return (limit - char);
                 },                 
             }                                       
@@ -84,13 +84,13 @@
             data: function(){
                 return {     
                     writtenText :'',
-                    maxLength : 10,
+                    maxLength : 50,
                 }
             },             
             computed: {
                 charactersLeft: function(){
                     char = this.writtenText.length,
-                    limit = 10;
+                    limit = 50;
                     return (limit - char);
                 },                 
             }                                       
