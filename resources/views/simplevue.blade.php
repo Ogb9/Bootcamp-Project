@@ -4,7 +4,7 @@
     </head>
         <body>
             <div id="app">
-            @extends('Layout.HnF')
+            @extends('Layout.master')
             @section('content')
             <h1>Message for today: {{message}}</h1>
             <p>Is today Monday? {{isMonday}}</p>

@@ -1,4 +1,4 @@
-@extends('Layout/HnF');
+@extends('Layout/master');
 
 
 @section('content')

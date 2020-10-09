@@ -29,7 +29,8 @@ class User extends Authenticatable
         'email',
         'password',
         'reg_no',
-        'user_type_id'
+        'user_type_id',
+        'module_id',
     ];
 
     /**
@@ -66,8 +67,16 @@ class User extends Authenticatable
         return $this->belongsToMany(Module::class);
     }
 
+    public function gradeFor($module)
+    {
+        return $this->grades()->where('module_id', $module->id)->first();
+    }
+
     public function userType() {
         return $this->belongsTo(UserType::class);
+    }
+    public function grades() {
+        return $this->hasMany(Grade::class);
     }
 
     public function url()

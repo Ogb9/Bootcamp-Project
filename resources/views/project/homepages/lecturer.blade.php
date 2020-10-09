@@ -1,19 +1,25 @@
-@extends('Layout.HnF')
+@php 
+    $pageTitle = "SFF-Modules Taught";
+    $link = "/logout";
+    $linkLabel = "Logout";
+@endphp
+
+@extends('Layout.master')
 @section('content')
 
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-color: thistle">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <div class="alert alert-success" role="alert">
-                        <h3>Welcome {{ $user->name }}</h3>
+                    <div class="alert alert-info" role="alert">
+                        <h3>Welcome <b>{{ $user->name }}</b></h3>
                     </div>                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <div class="alert alert-success" role="alert">
-                        <h3>Modules Taught</h3>
+                    <div class="alert alert-secondary" role="alert">
+                        <h3>You teach the following Modules</h3>
                     </div>                    
                 </div>
             </div> 
@@ -30,10 +36,8 @@
                                                 <h5>{{ $module->description }}</h5>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Average grade</a>
-                                                <a class="dropdown-item" href="#">View feedback</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Students' information</a>
+                                                <a class="dropdown-item" href="{{ route('modules.avgGrade.show', $module) }}">Average grade</a>
+                                                <a class="dropdown-item" href="{{ route('posts.showCommentsForLecturer', $module) }}">View feedback</a>
                                             </div>
                                         </div>                                          
                                     </div>

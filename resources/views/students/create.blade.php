@@ -1,7 +1,7 @@
 <?php 
     $pageTitle = "SFF-Student Login";
 ?>
-@extends('Layout.HnF')
+@extends('Layout.master')
 
 @section('content')
 
@@ -59,13 +59,13 @@
                                     <div class="form-group row">
                                         <label for="exampleFormControlSelect2" class="col-sm-2 col-form-label">Select Modules Taken</label>
                                         <div class="col-sm-10">
-                                            <select multiple class="form-control" id="exampleFormControlSelect2" size="6">
+                                            <select name="module_id" multiple="multiple" class="form-control" id="exampleFormControlSelect2" size="6">
                                             <option disabled>Ctrl+Click to multi-select</option>
-                                            <option>MEC</option>
-                                            <option>CVE</option>
-                                            <option>CPE</option>
-                                            <option>ELE</option>
-                                            <option>MTH</option>
+                                            <option value="1">Laravel</option>
+                                            <option value="2">PHP</option>
+                                            <option value="3">HTML</option>
+                                            <option value="4">Javascript</option>
+                                            <option value="5">Bootstrap</option>
                                             </select>
                                         </div>
                                     </div>

@@ -55,7 +55,7 @@ class Controller extends BaseController
     // Show the form for creating a new Student
     public function create()
     {
-        return view('students/create');
+        return view('/register');
     }
 
     public function store(Request $request)
@@ -73,16 +73,10 @@ class Controller extends BaseController
     }
 
     public function showLpage(User $user){
-        $lecturer = User::find(2);
+        $user = User::find(1);
         
-        // Get the currently authenticated user...
-        $user = Auth::user();
-
-        // Get the currently authenticated user's ID...
-        $id = Auth::id();
-        
-        Auth::logout();
-        return view('project/lecturerpagehome', compact('lecturer'));
+       
+        return view('project/homepages/lecturer', compact('user'));
     }
 
 

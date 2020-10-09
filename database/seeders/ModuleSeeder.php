@@ -29,7 +29,11 @@ class ModuleSeeder extends Seeder
         ]);
         Module::create([
             'title' => 'Javascript',
-            'description' => 'Another script'
+            'description' => 'A popular scriptor'
+        ]);
+        Module::create([
+            'title' => 'Bootstrap',
+            'description' => 'The Stylist'
         ]);
         //Link modules to student
         // $student1 = Student::find(2);

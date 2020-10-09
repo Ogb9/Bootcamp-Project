@@ -15,7 +15,7 @@ class UserTypeSeeder extends Seeder
      */
     public function run()
     {
-        foreach(['Administrator', 'Student', 'Lecturer'] as $role)
+        foreach(['Administrator', 'Lecturer', 'Student'] as $role)
             UserType::create([
                 'role' => $role
             ]);

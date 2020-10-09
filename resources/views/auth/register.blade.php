@@ -31,7 +31,19 @@
 
             <div class="mt-4">
                 <x-jet-label value="{{ __('Registration Number') }}" />
-                <x-jet-input class="block mt-1 w-full" type="text" name="regNo" :value="old('regNo')" required autofocus autocomplete="regNo" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="reg_no" :value="old('reg_no')" required autofocus autocomplete="reg_no" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label value="{{ __('Select Modules') }}" />
+                <select name="module_id" multiple="multiple" class="form-control" id="exampleFormControlSelect2" size="6">
+                    <option disabled>Ctrl+Click to multi-select</option>
+                    <option value="1">Laravel</option>
+                    <option value="2">PHP</option>
+                    <option value="3">HTML</option>
+                    <option value="4">Javascript</option>
+                    <option value="5">Bootstrap</option>
+                </select>
             </div>
 
             <div class="flex items-center justify-end mt-4">

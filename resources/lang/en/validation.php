@@ -135,6 +135,15 @@ return [
         ],
     ],
 
+    'custom' => [
+        'sFeedback' => [
+            'required_without' => 'The comment to student field is required when lecturer feedback is not present.',
+        ],
+        'lFeedback' => [
+            'required_without' => 'The lecturer feedback field is required when student feedback is not present.',
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes

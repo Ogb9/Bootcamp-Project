@@ -1,44 +1,41 @@
-@extends('Layout.HnF')
+@extends('Layout.master')
 
 @section('content')
-<main role="main" class="container-fluid">
-            <div class="jumbotron">
-                <h1>Students' Helping Hand</h1>
-                <p class="lead">We are interested in your feedback on any modules you
-                    have taken in the past. Your comments will make the work of your 
-                    successors easier and improve lecturers' performance.
-                </p>
+
+
+        <div class="container-fluid">
+           <div class="row">
+            <div class="col-8">
+            <div class="card bg-light text-white text-center">
+                    <img src="{{asset('images\01.jpg')}}" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h1 style="padding-bottom:20px; padding-top:90px; font-family:'Candara'" class="card-title"> <b>Students' helping hand</b></h1><hr>
+                        <p style="font-family:'Candara'"><h4>Give feedback on any modules you
+                            have taken in the past. Your comments will make the work of your 
+                            successors easier and improve lecturers' performance.</h4></p> 
+                        <p><h1>&#128170 &#128170</h1></p> 
+                    </div>
+                </div>
             </div>
-            <div class="card-deck">
-                <div class="card">
-                    {{-- <div class="card-body text-center"><a href= "{{ route('studentloginpage') }}"> --}}
-                    <div class="card-body text-center"><a href= "{{ route('login') }}">
-                        <h5 class="card-title"><b>Students</b></h5>
-                        <p class="card-text">Help students new to a module you've
-                            already taken by:</p>
-                            <ul>
-                                <li>
-                                    uploading useful resources/comments
-                                </li>
-                                <li>
-                                    providing anonymous feedback to lecturers
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="btn btn-primary">Student page <b>></b></p>
+                <div class="col-4" > 
+                    <div class="card bg-dark mb-3 text-center">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h3 style="color:Saddlebrown"><b>Students</b><h3><hr>
+                                <h6><p class="font-weight-bold" style="font-family:'Candara';color:MidnightBlue">Tell others what you found useful &#128226</p>
+                                <p class="font-weight-bold" style="font-family:'Candara';color:MidnightBlue">Give anonymous feedback to lecturers &#128172</p></h6>
+                                <a href= "{{ route('login') }}" class="btn btn-lg btn-primary">Login</a>      
+                            </li>
+                            <li class="list-group-item">
+                                <h3 style="color:Saddlebrown"><b>Lecturers<b><h3><hr>
+                                    <h6><p class="font-weight-bold" style="font-family:'Candara';color:MidnightBlue">View feedback from your students on the 
+                            different modules you've taught &#128195<p></h6>
+                                <a href="{{ route('lHomepage') }}" class="btn btn-lg btn-primary">Login</a>   
+                            </li>
+                        </ul>
                     </div>
-                    <img src="{{asset('images/Another_Workspace.jpg')}}" class="card-img-top" alt="...">
-                </a></div>
-                {{-- <a href="{{ route('lecturerloginpage') }}"><div class="card"> --}}
-                <a href="{{ route('register') }}"><div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title"><b>Lecturers</b></h5>
-                        <p class="card-text">View feedback from your students on the 
-                            different modules you've taught.
-                        </p>
-                        <p class="btn btn-primary">Lecturer page <b>></b></p>
-                    </div>
-                    <img src="{{asset('images/Workspace.jpg')}}" class="card-img-top" alt="...">
-                </a></div>
+                </div>
+            </div>
         </div>
 @endsection
+
